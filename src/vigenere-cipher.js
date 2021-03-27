@@ -13,13 +13,13 @@ class VigenereCipheringMachine {
     let result = "";
     const startA = "A".charCodeAt();
 
-    for (i = 0; i < trimedMessage.length; i++) {
+    for (let i = 0; i < trimedMessage.length; i++) {
       if (j >= key.length) j = 0;
       keyMessage += key[j];
       j++;
     }
 
-    for (i = 0; i < trimedMessage.length; i++) {
+    for (let i = 0; i < trimedMessage.length; i++) {
       let mi = trimedMessage[i].toUpperCase().charCodeAt(0);
       let ki = keyMessage[i].toUpperCase().charCodeAt(0);
       if (mi < startA || mi > "Z".charCodeAt()) {
@@ -33,7 +33,7 @@ class VigenereCipheringMachine {
     }
 
     j = 0;
-    for (i = 0; i < message.length; i++) {
+    for (let i = 0; i < message.length; i++) {
       if (message[i] === " ") {
         result = result.slice(0, i) + " " + result.slice(i);
       }
@@ -52,13 +52,13 @@ class VigenereCipheringMachine {
     let result = "";
     const startA = "A".charCodeAt();
 
-    for (i = 0; i < trimedMessage.length; i++) {
+    for (let i = 0; i < trimedMessage.length; i++) {
       if (j >= key.length) j = 0;
       keyMessage += key[j];
       j++;
     }
 
-    for (i = 0; i < trimedMessage.length; i++) {
+    for (let i = 0; i < trimedMessage.length; i++) {
       let mi = trimedMessage[i].toUpperCase().charCodeAt(0);
       let ki = keyMessage[i].toUpperCase().charCodeAt(0);
 
@@ -74,7 +74,7 @@ class VigenereCipheringMachine {
     }
 
     j = 0;
-    for (i = 0; i < encryptedMessage.length; i++) {
+    for (let i = 0; i < encryptedMessage.length; i++) {
       if (encryptedMessage[i] === " ") {
         result = result.slice(0, i) + " " + result.slice(i);
       }
